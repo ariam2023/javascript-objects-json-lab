@@ -62,9 +62,12 @@ var bobDetails = {
                 const row = document.createElement("tr");
                 const nameCell = document.createElement("td");
                 const emailCell = document.createElement("td");
-              
+
                 // ...
-              });
+            });
+
+            nameCell.textContent = `${item.first_name} " + ${item.last_name}`;
+            emailCell.textContent = item.email;
         })
         .catch(error => {
             // Handle errors here
